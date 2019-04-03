@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Guitarcats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guitarcats.each do |guitarcat| %>
+      <tr>
+        <td><%= guitarcat.title %></td>
+        <td><%= guitarcat.description %></td>
+        <td><%= guitarcat.image %></td>
+        <td><%= link_to 'Show', guitarcat %></td>
+        <td><%= link_to 'Edit', edit_guitarcat_path(guitarcat) %></td>
+        <td><%= link_to 'Destroy', guitarcat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guitarcat', new_guitarcat_path %>

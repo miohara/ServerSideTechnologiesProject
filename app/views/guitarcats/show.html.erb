@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @guitarcat.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @guitarcat.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @guitarcat.image %>
+</p>
+
+<%= link_to 'Edit', edit_guitarcat_path(@guitarcat) %> |
+<%= link_to 'Back', guitarcats_path %>

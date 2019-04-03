@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | The New Golf Store</title>
+    <title><%= yield(:title) %> | Songbird Instruments</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,35 +13,49 @@
     
     <header class="headSec"> 
       
-      <h1>Mike's Golf Store</h1>
+      <h1 style="font-family:rustico;">SongBird</h1>
       
-      <ul>
-        <li><%= link_to "Home", "/" %></li>
-        <li><%= link_to "Products", "/items" %></li>
-        <li><%= link_to "Help", help_path %></li>
-        <li><%= link_to "About", about_path %></li>
+      <td> <center>
+        <tr><%= link_to "Home", "/" %></li>
+        <tr><%= link_to "Guitars", "/items" %></tr>
+        <tr><%= link_to "Contact", help_path %></tr>
         
-        <% if session[:login] == 1 %>
-          <li><%= link_to "Log Out", logout_path %></li>
+      
+  
+       
+        
+        
+        <% if user_signed_in? %>
+        <tr><%= link_to 'Profile', edit_user_registration_path %></tr>
+        <tr><%= link_to "Your Account", "/profiles" %></a></tr>
+        <tr><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></tr>
         <% else %>
         
-          <li><%= link_to "Log In", login_path %></li>
+        <tr><%= link_to 'Sign Up', new_user_registration_path %></tr>
+        <tr><%= link_to 'Sign In', new_user_session_path %></tr>
         <% end %>
         
         
+        
+      
+        
+        </center></td>
         
       </ul>
       
     </header>
     
-    <div class="contaniner">
+    <div class="container">
     
     <%= yield %>
     </div>
     
     <footer class="foot">
       
-      <h1>Look at the footer of the page ya'll</h1>
+      <h1>Copyright Michael O'Hara | 2019 | Server Side Technologies</h1>
+      <%= link_to 'New Guitarcat', new_guitarcat_path, :class=>"button" %>
+      </footer>
     
   </body>
-</html>
+  
+  </html>

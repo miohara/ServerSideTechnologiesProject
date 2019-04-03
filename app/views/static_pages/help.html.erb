@@ -1,4 +1,31 @@
-<% provide(:title,"Help") %>
+<% provide(:title,"Contact") %>
 
-<h1>This is the help page</h1>
-<p>help me it burns</p>
+<h1>Leave Us A Message!</h1>
+<p>You can contact us below and also find our location</p>
+
+<form action="" method="post">
+		<fieldset>
+            <div>
+                <input type="text" name="first_name" id="fname" placeholder="First Name"/>
+            </div>
+            <div>
+                <input type="text" name="last_name" id="lname" placeholder="Last Name"/>
+            </div>
+            <div>
+                <input type="text" name="email" id="email" placeholder="Email"/>
+            </div>
+            <div>
+                <input type="password" name="pass" id="password" placeholder="Password"/>
+            </div>
+            <div>
+                <div class="small">Leave us a Message</div>
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
+            </div>    
+            <input type="button" value="Submit" onclick="emailValidator();">
+            <!--<input type="submit" name="submit" value="Send"/>-->
+        </fieldset>    
+    </form>
+
+	<script src="form.js"></script>
+	
+<div class="mapouter"><div class="gmap_canvas"><center><iframe width="392" height="386" id="gmap_canvas" src="https://maps.google.com/maps?q=ashbourne&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de"></a></center></div>

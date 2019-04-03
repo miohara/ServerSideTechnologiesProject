@@ -1,14 +1,24 @@
 <div class="mainCont">
-    <%=image_tag("golfswing.jpg", :class=> "welcomeIm") %>
+    <%=image_tag("crossing.png", :class=> "welcomeIm") %>
     
-    <h1>Home Page</h1>
+    <h1>Welcome to SongBird Instruments</h1>
     
-    <p>Welcome to the new golf home page!</p>
+    <p>Here at SongBird we pride ourselves on providing the leading guitars at the very best prices. Whether you're looking to purchase a new Fender 
+    or Gibson, you'll find it here</p>
     
-    <br>
+<hr>
+
+<%= render 'layouts/popularproducts' %> 
+
     
-    <p>Later we will fill this with dynamic content...</p>
+    <p>Looking for <%= link_to "Gibson, Fender, or Rickenbacker?", "/items" %></p>
     
-    
-    
+<hr>
+    <%= render 'layouts/categories' %> 
+
+</div>
+
+
+<div class="mainCont">
+    <%= render 'layouts/search' %> 
 </div>

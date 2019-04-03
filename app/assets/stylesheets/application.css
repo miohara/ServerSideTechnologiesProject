@@ -1,5 +1,13 @@
+body{
+    font-family: Arial, helvetica, sans-serif;
+    background: url("/assets/homebg.jpg");
+}
+
+
 .headSec {
-    background: url("/assets/site/golfcourse.jpg");
+     background: url("/assets/background2.jpg");
+     background-repeat: no-repeat;
+     background-size:100% 100%;
     min-height:10px;
     background-color: #b3e0ff;
     width: 100%;
@@ -13,34 +21,105 @@
     font-size: 80px;
     padding: 15px;
     
+    text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+    
 }
 
-ul { 
+.headSec a{
+color: #f2f2f2;
+text-align: center;
+padding: 20px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.headSec {
+overflow: hidden;
+background-color: black;
+text-align: center;
+padding: 20px;
+text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+
+}
+
+.headSec a.active{
+background-color: 042745;
+color: white;
+text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+
+}
+
+.headSec a:hover{
+background-color: white;
+color: white;
+
+
+}
+
+
+td { 
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;    
-}    
+     
+    
+}
 
+tr {float:center;
+    white-space: nowrap;
+    
+    
+}
 
-li {float:left;}
-
-li a {
+tr a {
     display: block;
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
     
 }
+
+
 
 
 .mainCont { 
     
     margin: auto;
     width:80%;
-    border: 3px solid #b3e0ff;
+    
+    padding: 10px;
+    text-align: center;
+}
+
+.welcomeIm {width: 30%;}
+
+
+
+
+.mainCont { 
+    
+    margin: auto;
+    width:80%;
+   
     padding: 10px;
     text-align: center;
 }
@@ -49,35 +128,30 @@ li a {
 
 
 .foot {
-    min-height: 80px;
-    background-color: #b3e0ff;
+    min-height: 20px;
+   color: white;
+   font-size: 10px;
+    background-color: black;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
     overflow: auto;
     
     
 }
 
 .container {
-      background: url("/assets/site/clubhead.png")
+      background: url("/assets/site/headstock.png");
       background-repeat:no-repeat;
       background-position:right bottom;
       width: 100%;
       min-height: 700px;
 }
 
-.mainCont {         
-    margin: auto;    
-    width:80%;    
-    border: 3px solid #b3e0ff;    
-    padding: 10px;    
-    text-align: center;}
-    
-    .welcomeIm {width: 30%;}
+
 
 #itemsContainer {
     width: 100%;
-    text-align: center;
+    text-align: left;
     
     
 }
@@ -85,10 +159,15 @@ li a {
 
 #itemsContainer h1 {
    display: block;
-    color: #4CAF50;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
     
     
 }
@@ -108,8 +187,8 @@ li a {
 
 .itemhols h1 {
    display: block;
-    color: #4CAF50;
-    text-align: center;
+    color: black;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px
@@ -119,8 +198,8 @@ li a {
 
 .itemhols p {
    display: block;
-    color: #4CAF50;
-    text-align: center;
+    color: black;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 16px
@@ -139,7 +218,7 @@ li a {
 
 
 .button {
-    background-color: #4CAF50;
+    background-color: gray;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -150,6 +229,7 @@ li a {
     margin: 4px 2px;
     cursor: pointer;
 }
+
 
 input[type=text], select {
     width: 100%;
@@ -163,7 +243,7 @@ input[type=text], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -173,5 +253,28 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: black;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
 }

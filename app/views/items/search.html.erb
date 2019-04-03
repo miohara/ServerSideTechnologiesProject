@@ -1,0 +1,36 @@
+<% if @items.length == 0 %>
+<div class="mainCont">
+    <h2>Unfortunately we do not have this in stock at the moment</h2>
+</div>
+<% end %>
+
+<br><br>
+<div class="mainCont">
+    
+  
+  
+     
+      <% @items.each do |item| %>
+      <div class="itemhols">
+       <h1><%= item.title %></h1>
+       
+       <%= link_to (image_tag item.image_url, :class => "itemholsIm"), item %>
+       
+      
+       
+     
+         
+         
+         <% if session[:login] == 1 %>
+         <%= link_to 'Edit',  edit_item_path(item), :class => "button", :role => "button" %>
+         <%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
+       <% end %>
+       
+       
+       
+       </p>
+        
+      </div>
+    <% end %>
+      
+</div>

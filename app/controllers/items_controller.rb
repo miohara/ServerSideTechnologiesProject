@@ -60,8 +60,13 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
+  
+   def search
+      searchterm = "%#{params[:searchbox]}%"
+      @items = Item.where("title like ?", searchterm)
+      
+  end
+    private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
@@ -71,4 +76,9 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:title, :description, :price, :image_url, :category, :brand)
     end
+    
+   
+
+    
+    
 end

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<div class="mainCont">
+
+<h1>Hello <%= current_user.email %></h1>
+
+<%= link_to "View Your Cart", "/cart" %>
+<br>
+<%= link_to "View Your Orders", "/orders" %>
+
+<table>
+  <thead>
+    <tr>
+  
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+</div>

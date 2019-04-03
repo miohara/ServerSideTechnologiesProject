@@ -1,0 +1,2 @@
+class Guitarcat < ApplicationRecord
+end

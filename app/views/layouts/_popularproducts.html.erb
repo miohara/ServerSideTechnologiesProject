@@ -1,0 +1,40 @@
+<div class="mainCont">
+
+
+
+ <div id="itemsContainer">
+  
+  <h1>Most Popular!</h1>
+     
+      <% @items.limit(4).order(id: :desc).each do |item| %>
+      <div class="itemhols">
+       <h1><%= item.title %></h1>
+       
+       <%= link_to (image_tag item.image_url, :class => "itemholsIm"), item %>
+       
+       <p>Price <%= number_to_currency(item.price, :unit => "€") %>
+       <br>
+      
+       
+       <p>
+        
+         
+     
+         
+         
+         <% if session[:login] == 1 %>
+         <%= link_to 'Edit',  edit_item_path(item), :class => "button", :role => "button" %>
+         <%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
+       <% end %>
+       
+       
+       
+       </p>
+        
+      </div>
+    <% end %>
+      
+</div>
+
+
+</div>
