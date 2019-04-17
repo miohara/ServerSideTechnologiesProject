@@ -11,6 +11,9 @@ class GuitarcatsController < ApplicationController
   # GET /guitarcats/1.json
   def show
   end
+  
+  
+  
 
   # GET /guitarcats/new
   def new

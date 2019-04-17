@@ -55,7 +55,7 @@ Rails.application.routes.draw do
   
   get '/cart' => 'cart#index'
   
-  
+
   
   # get 'static_pages/home'
   # get 'static_pages/help'

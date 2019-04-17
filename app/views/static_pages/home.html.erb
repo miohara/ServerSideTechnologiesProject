@@ -10,8 +10,9 @@
 
 <%= render 'layouts/popularproducts' %> 
 
-    
+   <hr> 
     <p>Looking for <%= link_to "Gibson, Fender, or Rickenbacker?", "/items" %></p>
+    <div id ="search"><%= render 'layouts/search' %></div>
     
 <hr>
     <%= render 'layouts/categories' %> 
@@ -19,6 +20,4 @@
 </div>
 
 
-<div class="mainCont">
-    <%= render 'layouts/search' %> 
-</div>
+

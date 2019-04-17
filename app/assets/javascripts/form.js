@@ -15,7 +15,7 @@ function emailValidator() {
             && lastname !== "" && message !== "") {
         //outputInfoTag.innerHTML = "Email Address is valid";
         window.alert("We will get back to you shortly!");
-        window.location = "index.html";
+        
     } else if (userEmail === "") {
         //outputInfoTag.innerHTML = "You did not enter an Email Address!"; 
         window.alert("You did not enter an Email Address!");
